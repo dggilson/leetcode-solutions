@@ -29,9 +29,13 @@ class Solution(object):
         indx = [0,3,6]
         for i in range(9):
             value_set.clear()
-            #updates window
+            #updates the row and col indices start_row by iterating between 0, 3, 6
             start_row = indx[i%3]
             end_row = start_row+3
+            #after we shift between all the rows in the first column we jump to the 2nd row
+            # X _ _
+            # X _ _
+            # X _ _
             if(start_row == 0):
                 start_column = indx[cnt]
                 end_column = start_column + 3
